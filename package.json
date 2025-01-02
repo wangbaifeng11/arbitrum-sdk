@@ -1,4 +1,5 @@
 {
+  "name": "@ben-arbitrum/sdk",
   "private": true,
   "scripts": {
     "audit:ci": "audit-ci --config ./audit-ci.jsonc",
