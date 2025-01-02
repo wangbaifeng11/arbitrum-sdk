@@ -1,6 +1,12 @@
 {
   "name": "@ben-arbitrum/sdk",
   "private": true,
+  "version": "4.0.2",
+  "description": "Typescript library client-side interactions with Arbitrum",
+  "author": "Offchain Labs, Inc.",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "audit:ci": "audit-ci --config ./audit-ci.jsonc",
     "build": "yarn workspace @arbitrum/sdk build",
