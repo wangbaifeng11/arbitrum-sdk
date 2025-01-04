@@ -54,13 +54,13 @@ export declare class ChildTransactionReceipt implements TransactionReceipt {
      * @param childProvider
      * @returns number of confirmations of batch including tx, or 0 if no batch included this tx
      */
-    getBatchConfirmations(childProvider: providers.JsonRpcProvider): any;
+    getBatchConfirmations(childProvider: providers.JsonRpcProvider): Promise<BigNumber>;
     /**
      * Get the number of the batch that included this tx (will throw if no such batch exists)
      * @param childProvider
      * @returns number of batch in which tx was included, or errors if no batch includes the current tx
      */
-    getBatchNumber(childProvider: providers.JsonRpcProvider): Promise<any>;
+    getBatchNumber(childProvider: providers.JsonRpcProvider): Promise<BigNumber>;
     /**
      * Whether the data associated with this transaction has been
      * made available on parent chain

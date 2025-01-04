@@ -6,7 +6,7 @@ import { ParentToChildMessageGasParams, ParentToChildMessageParams } from '../me
  * execution on the child chain
  */
 export interface ParentToChildTransactionRequest {
-    estimates: any;
+    estimates?: any;
     /**
      * Core fields needed to form the parent component of the transaction request
      */

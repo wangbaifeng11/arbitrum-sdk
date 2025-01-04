@@ -463,8 +463,19 @@ export declare class Erc20L1L3Bridger extends BaseL1L3Bridger {
     protected _fillPartialTeleportParams(partialTeleportParams: OmitTyped<IL1Teleporter.TeleportParamsStruct, 'gasParams'>, retryableOverrides: Erc20L1L3DepositRequestRetryableOverrides, l1Provider: Provider, l2Provider: Provider, l3Provider: Provider): Promise<{
         teleportParams: {
             gasParams: IL1Teleporter.RetryableGasParamsStruct;
+            to: string;
+            amount: BigNumberish;
+            l1Token: string;
+            l3FeeTokenL1Addr: string;
+            l1l2Router: string;
+            l2l3RouterOrInbox: string;
         };
-        costs: any;
+        costs: [BigNumber, BigNumber, number, IL1Teleporter.RetryableGasCostsStructOutput] & {
+            ethAmount: BigNumber;
+            feeTokenAmount: BigNumber;
+            teleportationType: number;
+            costs: IL1Teleporter.RetryableGasCostsStructOutput;
+        };
     }>;
     /**
      * @returns The size of the calldata for a call to L2ForwarderFactory.callForwarder

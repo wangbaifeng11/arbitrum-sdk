@@ -34,7 +34,7 @@ export declare class ParentToChildMessageCreator {
      * @param nativeTokenIsEth
      * @returns
      */
-    protected static getTicketCreationRequestCallData(params: ParentToChildMessageParams, estimates: Pick<RetryableData, ParentToChildGasKeys>, excessFeeRefundAddress: string, callValueRefundAddress: string, nativeTokenIsEth: boolean): any;
+    protected static getTicketCreationRequestCallData(params: ParentToChildMessageParams, estimates: Pick<RetryableData, ParentToChildGasKeys>, excessFeeRefundAddress: string, callValueRefundAddress: string, nativeTokenIsEth: boolean): string;
     /**
      * Generate a transaction request for creating a retryable ticket
      * @param params

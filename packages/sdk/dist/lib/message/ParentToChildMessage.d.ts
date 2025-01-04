@@ -234,5 +234,5 @@ export declare class EthDepositMessage {
      */
     constructor(childProvider: Provider, childChainId: number, messageNumber: BigNumber, from: string, to: string, value: BigNumber);
     status(): Promise<EthDepositMessageStatus>;
-    wait(confirmations?: number, timeout?: number): Promise<any>;
+    wait(confirmations?: number, timeout?: number): Promise<TransactionReceipt | null>;
 }

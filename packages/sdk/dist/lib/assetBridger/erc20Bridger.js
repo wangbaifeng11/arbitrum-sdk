@@ -394,7 +394,7 @@ class Erc20Bridger extends assetBridger_1.AssetBridger {
         const estimates = await gasEstimator.populateFunctionParams(depositFunc, parentProvider, tokenGasOverrides);
         console.log('%c estimates new', 'color: #00A0E9; font-size: 26px; font-weight: blod;', estimates);
         return {
-            estimates,
+            estimates: estimates,
             txRequest: {
                 to: this.childNetwork.tokenBridge.parentGatewayRouter,
                 data: estimates.data,

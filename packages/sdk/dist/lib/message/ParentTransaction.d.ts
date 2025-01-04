@@ -45,7 +45,10 @@ export declare class ParentTransactionReceipt implements TransactionReceipt {
      * Get any InboxMessageDelivered events that were emitted during this transaction
      * @returns
      */
-    getInboxMessageDeliveredEvents(): unknown[];
+    getInboxMessageDeliveredEvents(): {
+        messageNum: BigNumber;
+        data: string;
+    }[];
     /**
      * Get combined data for any InboxMessageDelivered and MessageDelivered events
      * emitted during this transaction
@@ -74,7 +77,13 @@ export declare class ParentTransactionReceipt implements TransactionReceipt {
      * Get any token deposit events created by this transaction
      * @returns
      */
-    getTokenDepositEvents(): unknown[];
+    getTokenDepositEvents(): {
+        l1Token: string;
+        _from: string;
+        _to: string;
+        _sequenceNumber: BigNumber;
+        _amount: BigNumber;
+    }[];
     /**
      * Replaces the wait function with one that returns a {@link ParentTransactionReceipt}
      * @param contractTransaction

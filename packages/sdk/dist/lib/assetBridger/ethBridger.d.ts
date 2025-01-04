@@ -123,7 +123,7 @@ export declare class EthBridger extends AssetBridger<EthDepositParams | EthDepos
      * Approves the custom gas token to be spent by the Inbox on the parent network.
      * @param params
      */
-    approveGasToken(params: WithParentSigner<ApproveGasTokenParamsOrTxRequest>): Promise<any>;
+    approveGasToken(params: WithParentSigner<ApproveGasTokenParamsOrTxRequest>): Promise<import("@ethersproject/abstract-provider").TransactionResponse>;
     /**
      * Gets transaction calldata for a tx request for depositing ETH or custom gas token
      * @param params

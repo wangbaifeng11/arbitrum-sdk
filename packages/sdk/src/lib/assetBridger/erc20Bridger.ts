@@ -737,7 +737,7 @@ export class Erc20Bridger extends AssetBridger<
     )
     console.log('%c estimates new', 'color: #00A0E9; font-size: 26px; font-weight: blod;', estimates);
     return {
-      estimates,
+      estimates: estimates,
       txRequest: {
         to: this.childNetwork.tokenBridge.parentGatewayRouter,
         data: estimates.data,

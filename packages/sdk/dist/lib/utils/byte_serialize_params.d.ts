@@ -32,7 +32,7 @@ import { Signer } from '@ethersproject/abstract-signer';
 import { BigNumber } from '@ethersproject/bignumber';
 type PrimativeType = string | number | boolean | BigNumber;
 type PrimativeOrPrimativeArray = PrimativeType | PrimativeType[];
-export declare const getAddressIndex: (address: string, signerOrProvider: Signer | Provider) => Promise<any>;
+export declare const getAddressIndex: (address: string, signerOrProvider: Signer | Provider) => Promise<number>;
 /**
   to use:
   

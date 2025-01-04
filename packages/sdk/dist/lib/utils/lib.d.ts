@@ -35,11 +35,11 @@ type GetFirstBlockForL1BlockProps = {
  * @returns {Promise<number | undefined>} - A Promise that resolves to a number if a block is found, or undefined otherwise.
  */
 export declare function getFirstBlockForL1Block({ arbitrumProvider, forL1Block, allowGreater, minArbitrumBlock, maxArbitrumBlock, }: GetFirstBlockForL1BlockProps): Promise<number | undefined>;
-export declare const getBlockRangesForL1Block: (props: GetFirstBlockForL1BlockProps) => Promise<(number | "latest" | undefined)[]>;
+export declare const getBlockRangesForL1Block: (props: GetFirstBlockForL1BlockProps) => Promise<number[] | undefined[]>;
 export declare function getNativeTokenDecimals({ parentProvider, childNetwork, }: {
     parentProvider: Provider;
     childNetwork: ArbitrumNetwork;
-}): Promise<any>;
+}): Promise<number>;
 export declare function scaleFrom18DecimalsToNativeTokenDecimals({ amount, decimals, }: {
     amount: BigNumber;
     decimals: number;

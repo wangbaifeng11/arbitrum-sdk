@@ -46,7 +46,7 @@ export declare class ChildToParentMessageReaderNitro extends ChildToParentMessag
     protected outboxAddress?: string;
     protected l1BatchNumber?: number;
     constructor(parentProvider: Provider, event: EventArgs<ChildToParentTxEvent>);
-    getOutboxProof(childProvider: Provider): Promise<any>;
+    getOutboxProof(childProvider: Provider): Promise<string[]>;
     /**
      * Check if this message has already been executed in the Outbox
      */
