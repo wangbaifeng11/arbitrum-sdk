@@ -215,6 +215,7 @@ class ParentToChildMessageGasEstimator {
             maxFeePerGas: estimates.maxFeePerGas,
             maxSubmissionCost: estimates.maxSubmissionCost,
         });
+        console.log('%c innerData', 'color: #00A0E9; font-size: 26px; font-weight: blod;', innerData);
         return {
             estimates,
             innerData,
