@@ -384,6 +384,7 @@ class Erc20Bridger extends assetBridger_1.AssetBridger {
                     innerData,
                 ]);
             return {
+                innerData: innerData,
                 data: functionData,
                 to: this.childNetwork.tokenBridge.parentGatewayRouter,
                 from: defaultedParams.from,

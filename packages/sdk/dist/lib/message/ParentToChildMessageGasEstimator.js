@@ -167,7 +167,9 @@ class ParentToChildMessageGasEstimator {
      * Will initially be called with dummy values to trigger a special revert containing
      * the real params. Then called again with the real params to form the final data to be submitted
      */
-    dataFunc, parentProvider, gasOverrides) {
+    dataFunc, 
+    // ) => ParentToChildTransactionRequest['txRequest'],
+    parentProvider, gasOverrides) {
         // get function data that should trigger a retryable data error
         const { data: nullData, to, value, from, } = dataFunc({
             gasLimit: retryableData_1.RetryableDataTools.ErrorTriggeringParams.gasLimit,
@@ -208,13 +210,14 @@ class ParentToChildMessageGasEstimator {
             callValueRefundAddress: retryable.callValueRefundAddress,
         }, baseFee, parentProvider, gasOverrides);
         // form the real data for the transaction
-        const { data: realData, to: realTo, value: realValue, } = dataFunc({
+        const { data: realData, to: realTo, value: realValue, innerData, } = dataFunc({
             gasLimit: estimates.gasLimit,
             maxFeePerGas: estimates.maxFeePerGas,
             maxSubmissionCost: estimates.maxSubmissionCost,
         });
         return {
             estimates,
+            innerData,
             retryable,
             data: realData,
             to: realTo,

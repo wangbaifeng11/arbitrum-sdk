@@ -722,6 +722,7 @@ export class Erc20Bridger extends AssetBridger<
             ])
 
       return {
+        innerData: innerData,
         data: functionData,
         to: this.childNetwork.tokenBridge.parentGatewayRouter,
         from: defaultedParams.from,

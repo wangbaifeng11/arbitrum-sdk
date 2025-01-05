@@ -303,10 +303,12 @@ export class ParentToChildMessageGasEstimator {
      */
     dataFunc: (
       params: OmitTyped<ParentToChildMessageGasParams, 'deposit'>
-    ) => ParentToChildTransactionRequest['txRequest'],
+    ) => any,
+  // ) => ParentToChildTransactionRequest['txRequest'],
     parentProvider: Provider,
     gasOverrides?: GasOverrides
   ): Promise<{
+    innerData:any
     estimates: ParentToChildMessageGasParams
     retryable: RetryableData
     data: BytesLike
@@ -369,6 +371,7 @@ export class ParentToChildMessageGasEstimator {
       data: realData,
       to: realTo,
       value: realValue,
+      innerData,
     } = dataFunc({
       gasLimit: estimates.gasLimit,
       maxFeePerGas: estimates.maxFeePerGas,
@@ -377,6 +380,7 @@ export class ParentToChildMessageGasEstimator {
 
     return {
       estimates,
+      innerData,
       retryable,
       data: realData,
       to: realTo,

@@ -2,7 +2,6 @@ import { Provider } from '@ethersproject/abstract-provider';
 import { BigNumber, BigNumberish } from '@ethersproject/bignumber';
 import { BytesLike } from 'ethers';
 import { RetryableData } from '../dataEntities/retryableData';
-import { ParentToChildTransactionRequest } from '../dataEntities/transactionRequest';
 import { OmitTyped } from '../utils/types';
 import { ParentToChildMessageGasParams, ParentToChildMessageNoGasParams } from './ParentToChildMessageCreator';
 /**
@@ -92,7 +91,8 @@ export declare class ParentToChildMessageGasEstimator {
      * Will initially be called with dummy values to trigger a special revert containing
      * the real params. Then called again with the real params to form the final data to be submitted
      */
-    dataFunc: (params: OmitTyped<ParentToChildMessageGasParams, 'deposit'>) => ParentToChildTransactionRequest['txRequest'], parentProvider: Provider, gasOverrides?: GasOverrides): Promise<{
+    dataFunc: (params: OmitTyped<ParentToChildMessageGasParams, 'deposit'>) => any, parentProvider: Provider, gasOverrides?: GasOverrides): Promise<{
+        innerData: any;
         estimates: ParentToChildMessageGasParams;
         retryable: RetryableData;
         data: BytesLike;
