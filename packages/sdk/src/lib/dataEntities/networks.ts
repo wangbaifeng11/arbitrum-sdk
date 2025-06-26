@@ -275,6 +275,41 @@ const networks: {
       l2ForwarderFactory: '0x88feBaFBb4E36A4E7E8874E4c9Fd73A9D59C2E7c',
     },
   },
+  2886: {
+    chainId: 2886,
+    confirmPeriodBlocks: 150,
+    ethBridge: {
+      bridge: "0x53a7559d1e57E371F3D1e55Fea97e9B6748418a3",
+      inbox: "0x14F38F96C4CAB971D0Ec466241c422b23d0FA992",
+      outbox: "0x47dA6c41d03Ac0608924e86f61577df558114Bd8",
+      rollup: "0xA113e2E9620a3Bc088a681eBB2C234FDbeb85e21",
+      sequencerInbox: "0xE79283a775f6A1de250cB3284E7fF3541ff7668A",
+    },
+    isCustom: true,
+    isTestnet: true,
+    name: 'Deriw Chain',
+    parentChainId: 42161,
+    tokenBridge: {
+      parentCustomGateway: "0xfFA83F83aED855Cd1e1760e7C77C90B9e58E26ac",
+      parentErc20Gateway: "0x483754470664ea3d99Fa79AE803e56cA0afe4827",
+      parentGatewayRouter: "0xed4440aF18C35A29b3928e9D283469c662db73BF",
+      parentMultiCall: "0x90B02D9F861017844F30dFbdF725b6aa84E63822",
+      parentProxyAdmin: "0x0000000000000000000000000000000000000000",
+      parentWeth: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      parentWethGateway: "0x5eee4D349AD45F755d2E4aef93e309b463B65E41",
+      childCustomGateway: "0x825b43FCA2a707DDaf82e81Cda87D5242BFd5aD5",
+      childErc20Gateway: "0x6121117fCcEcdD6dFa7B3230Eacd4f53e12905Db",
+      childGatewayRouter: "0xb85b91A9362e296243360e83Cb0792a87Dc32712",
+      childMultiCall: "0x3E24a4754E79BcDC29b74D99972DFA23dd5710bE",
+      childProxyAdmin: "0xaAeCc7A6345d6E595dFA386D1c5B12575fC515F5",
+      childWeth: "0xbb8f023e958545Fcf7DA783240206d399112B41e",
+      childWethGateway: "0x548f4a51Ed4b5c568C359720993e791De2341804",
+    },
+    teleporter: {
+      l1Teleporter: "0x0000000000000000000000000000000000000000",
+      l2ForwarderFactory: "0x0000000000000000000000000000000000000000",
+    },
+  }
 }
 
 /**
